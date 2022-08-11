@@ -6,7 +6,7 @@ import DayTable from '/client/components/DayTable.jsx'
 class LogSheet extends Component {
   render(){
       return(
-          <div>
+          <div id="logsheet" class="content-box">
             <h1>WORK</h1>
             <DayTable />
           </div>

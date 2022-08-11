@@ -4,7 +4,7 @@ import { BrowserRouter } from 'react-router-dom';
 
 import CreateSheet from '/client/components/CreateSheet.jsx';
 import LogSheet from '/client/components/LogSheet.jsx'
-import './client/src/style.css'
+import '../src/style.css'
 
 class App extends Component {
     render() {

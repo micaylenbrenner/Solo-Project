@@ -1,7 +1,7 @@
 const { webpack } = require('webpack'); // ** why in {} ?
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const CopyPlugin = require('copy-webpack-plugin');
+// const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = {
     mode: 'development',
@@ -27,6 +27,10 @@ module.exports = {
             presets: ['@babel/preset-env', '@babel/preset-react']
             }
           },
+        },
+        {
+          test: /\.css$/i,
+          use: ["style-loader", "css-loader"],
         },
         // {
         //   test: /.(css|scss)$/,
@@ -70,7 +74,7 @@ module.exports = {
 
   plugins: [
     new HtmlWebpackPlugin({ title: 'Development', template: './client/src/index.html'}),
-    new CopyPlugin({ patterns: [{ from: './src/style.css' }]}),
+    // new CopyPlugin({ patterns: [{ from: './client/src/style.css' }]}),
   ],
   
 //   resolve: {
